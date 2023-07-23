@@ -10,6 +10,7 @@
   --modal-bagraund: #fcfcfc;
   --modal-windov-bg: rgba(46, 47, 66, 0.4);
   --footer-networks-activ: #31d0aa;
+  --dark-color: #000;
 }
 /* Common styles */
 body {
@@ -29,15 +30,30 @@ img {
   display: flex;
   align-items: center;
 }
+
+@media only screen and (min-width: 768px) {
+  .header-logo {
+    margin-right: 120px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .header-logo {
+    margin-right: 76px;
+    margin-left: 140px;
+  }
+}
+
 .conacts {
   display: flex;
   align-items: center;
 }
 .list {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 24px;*/
 }
+
 .navigation {
   display: block;
   padding-top: 24px;
@@ -49,31 +65,119 @@ img {
   gap: 40px;
   text-align: center;
 }
-.address-list {
-  display: flex;
-  gap: 40px;
-  justify-content: flex-end;
-  align-items: center;
+
+@media only screen and (min-width: 768px) {
+  .list-nav {
+    padding-right: 122px;
+  }
 }
+
+@media only screen and (min-width: 1158px) {
+  .list-nav {
+    /* padding-right: 322px; */
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .list-nav {
+    display: none;
+  }
+}
+
+.address-list {
+}
+
+@media only screen and (max-width: 767px) {
+  .address-list {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .address-list {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .address-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
 .two-section-item {
-  flex-basis: calc((100% - 3 * 24px) / 4);
+  /* flex-basis: calc((100% - 3 * 24px) / 4); */
 }
 .two-section-list {
-  display: flex;
-  gap: 24px;
+}
+
+@media only screen and (min-width: 758px) {
+  .two-section-list {
+    display: flex;
+    gap: 24px;
+  }
 }
 .two-section {
   padding: 120px 0;
 }
+
 .section {
-  padding-bottom: 120px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  /* padding-bottom: 120px; */
 }
+
+@media only screen and (min-width: 768px) {
+  .section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+/* Base styles for small devices */
+
 .container {
-  max-width: 1158px;
-  margin: 0 auto;
-  padding: 0 15px;
+  min-width: 320px;
+  max-width: 428px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-inline-end: 16px;
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
+
+/* Tablet screen */
+
+@media only screen and (min-width: 768px) {
+  .container {
+    min-width: 768px;
+  }
+}
+
+/* Desktop screen */
+
+@media only screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
 .header {
+  padding-top: 24px;
+  padding-bottom: 22px;
   border-bottom: 1px solid #e7e9fc;
   background-color: var(--our-team-bg);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -200,6 +304,7 @@ button {
 .contacts {
   font-style: normal;
 }
+
 .contacts-address:hover,
 .contacts-address:focus {
   color: var(--title-accent-cl);
@@ -212,9 +317,10 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-black-cl);
-  display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  display: flex;
+  gap: 6px;
+  /* padding-top: 6px;
+  padding-bottom: 6px; */
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-section {
@@ -491,17 +597,36 @@ button {
 }
 
 .clients-item {
-  width: 168px;
+  max-width: 190px;
   height: 88px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* width: 168px;
+  height: 88px; */
 }
 
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  align-items: center;
+  gap: 72px 16px;
+  flex-basis: (calc(100% - 16px) / 2);
 }
+
+@media only screen and (min-width: 768px) {
+  .clients-list {
+    gap: 72px 24px;
+    flex-basis: (calc(100% - 48px) / 3);
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .clients-list {
+    gap: 24px;
+  }
+}
+
 .claiens-icon {
   fill: currentColor;
 }
@@ -674,15 +799,25 @@ button {
 /* Features-icons */
 
 .features-icons {
-  padding: 24px 100px;
+  display: none;
+  /* padding: 24px 100px;
   border-radius: 4px;
   background: var(--cloud-cl);
   margin-bottom: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 112px;
+  height: 112px; */
 }
+
+/* @media only screen and (min-width: 758px) {
+  .features-icons {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-basis: calc((100% - 24px) / 2);
+  }
+} */
 
 .icon {
 }
@@ -1033,4 +1168,180 @@ button {
 
 .subscribe-form-icon {
   margin-left: 16px;
+}
+
+/* Styles menu */
+
+.menu-toggle-icon {
+  stroke: var(--main-dark-cl);
+}
+
+.menu-toggle {
+  min-height: 24px;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mob-close {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+  color: var(--our-team-bg);
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 250ms var(--cubic-bezier),
+    border 250ms var(--cubic-bezier);
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--our-team-bg);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+}
+
+.mobile-menu {
+}
+.mobile-menu .link {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.mobile-box-one {
+  display: block;
+  padding-top: 80px;
+  padding-left: 40px;
+  margin-bottom: auto;
+}
+.mobile-menu {
+  color: var(--main-dark-cl);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+}
+
+.mobile-menu:active {
+  color: var(--title-accent-cl);
+}
+
+.mobile-menu-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+.mobile-menu-link {
+}
+.mobile-box-two {
+  padding-left: 40px;
+  padding-right: 35px;
+}
+.mobile-contacts {
+}
+.mobile-address-list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.mobile-contacts-item {
+}
+
+.mobile-contacts-item:active {
+  color: var(--title-accent-cl);
+}
+
+.mobile-contacts-mail {
+  color: var(--main-black-cl);
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+}
+
+.mobile-contacts-tel {
+  font-size: 29px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  color: var(--main-black-cl);
+}
+.mobile-box-tree {
+  padding-left: 40px;
+  padding-bottom: 40px;
+  padding-right: 60px;
+  padding-top: 48px;
+}
+.mobile-networks-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+}
+.mobile-networks-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--logo-accent-cl);
+  width: 100%;
+  padding: 8px;
+  border-radius: 50%;
+  color: var(--clients-border);
+}
+.mobile-networks {
+}
+.mobile-networks-icons {
+  fill: var(--cloud-cl);
+}
+.mobile-list-networks {
 }
