@@ -385,7 +385,7 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/webstudio-images/hero-sec/_mob@1x.jpg);
+    url(../images/webstudio-images/hero-sec/_mob.jpg);
   /* url(../images/webstudio-images/hero-sec/_desk@1x.jpg); */
   background-repeat: no-repeat;
   background-position: center;
@@ -1021,6 +1021,15 @@ button {
 /* Footer networks */
 
 .footer-media {
+  color: var(--our-team-bg);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.footer-subscribe {
   color: var(--our-team-bg);
   font-size: 16px;
   font-style: normal;
