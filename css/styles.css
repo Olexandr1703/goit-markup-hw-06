@@ -385,15 +385,14 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/webstudio-images/hero-sec/_mob.jpg);
-  /* url(../images/webstudio-images/hero-sec/_desk@1x.jpg); */
+    url(../images/webstudio-images/hero-sec/hero-img.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 /* Retina screen */
 
-@media only screen and (min-width: 429px) {
+/* @media only screen and (min-width: 429px) {
   .hero-img {
     background-image: linear-gradient(
         to bottom,
@@ -439,7 +438,7 @@ button {
         url(../images/webstudio-images/hero-sec/_desk@2x.jpg);
     }
   }
-}
+} */
 
 .hero-btn {
   font-family: "Roboto", sans-serif;
